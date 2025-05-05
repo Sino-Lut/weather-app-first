@@ -10,17 +10,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="text"
             placeholder="Enter a city.."
             required
             class="search-form-input"
+            id="search-input"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
@@ -28,7 +30,7 @@
       <main>
         <div class="current-temperature">
           <div>
-            <h1 class="weather-city">Paris</h1>
+            <h1 class="weather-city" id="city">Paris</h1>
             <p class="weather-details">
               Saturday 0:13, clear sky <br />
               Humidity:<strong>65%</strong>,Wind: <strong>3.09km/h</strong>
@@ -36,7 +38,7 @@
           </div>
           <div class="weather-temperature-container">
             <div class="weather-icon">⛅</div>
-            <div class="weather-temperature">20</div>
+            <div class="weather-temperature" id="temperature">20</div>
             <div class="weather-unit">°C</div>
           </div>
         </div>
